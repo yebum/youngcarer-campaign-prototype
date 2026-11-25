@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="영케어러 캠페인 「돌봄을 돌봄」 웹 디자인 시안 (프로토타입)">
+<title>돌봄을 돌봄 | 영케어러 캠페인 (시안 v4)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="responsive.css?v=3">
+</head>
+<body>
+
+<header class="nav-wrap">
+  <nav class="nav-bar">
+    <a href="#top" class="logo"><img src="img/logo.jpg" alt="월드휴먼브리지"></a>
+    <div class="nav-links">
+      <a href="#stories">영케어러 이야기</a>
+      <a href="#compare">다른일상</a>
+      <a href="#cheer">응원하기</a>
+      <a href="#donate" class="btn-dark">후원으로 연결하기 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </nav>
+</header>
+
+<aside class="rail" aria-hidden="true">
+  <span data-i="1"></span><span data-i="2"></span><span data-i="3"></span><span data-i="4"></span><span data-i="5"></span><span data-i="6"></span><span data-i="7"></span>
+</aside>
+
+<main id="top">
+
+<!-- ============ 벽 안 (닫힌 구간) ============ -->
+<div class="wall">
+
+  <section class="hero">
+    <i class="dot near" style="left:-30px;top:60%;--d:110px;--c:var(--lime)"></i>
+    <i class="dot near" style="right:40px;top:6%;--d:70px;--c:var(--orange)"></i>
+    <i class="dot" style="left:5%;top:22%;--d:16px;--c:var(--lime)" data-depth=".25"></i>
+    <i class="dot" style="left:45%;top:16%;--d:10px;--c:#fff" data-depth=".4"></i>
+    <div class="hero-copy reveal">
+      <h1 class="display">돌봄<em>을</em>돌봄</h1>
+      <p class="lead">가족을 돌보느라 자신의 오늘을 미뤄온 청년들.<br>이제 우리가 그 청년들의 시간을 함께 돌봅니다.</p>
+      <a href="#donate" class="btn-pill light">지금영케어러 후원하기 <span class="blob"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <div class="hero-stage" id="heroStage">
+      <i class="dot" style="left:-6%;top:8%;--d:22px;--c:var(--lime)" data-depth=".6"></i>
+      <i class="dot" style="right:2%;top:0;--d:14px;--c:#fff" data-depth=".3"></i>
+      <i class="dot" style="right:-3%;top:44%;--d:26px;--c:var(--orange)" data-depth=".8"></i>
+      <i class="dot" style="right:6%;bottom:16%;--d:16px;--c:var(--lime)" data-depth=".5"></i>
+      <figure class="photo-card hero-photo" data-depth=".25"><img src="img/hero.jpg" alt="가족을 부축하는 청년의 뒷모습"></figure>
+      <div class="room-wrap" data-depth=".55"><div class="ground"></div><div id="room" class="float-slow"></div></div>
+      <p class="caption on-dark">* 실제 영케어러의 사진을 기반으로, 초상권 보호를 위해 일부 AI 보정하였습니다.</p>
+    </div>
+  </section>
+
+  <!-- 01 -->
+  <section class="sec" id="day" data-ch="1">
+    <i class="dot" style="left:4%;top:28%;--d:24px;--c:var(--lime)" data-depth=".4"></i>
+    <i class="dot" style="right:5%;top:18%;--d:16px;--c:var(--orange)" data-depth=".6"></i>
+    <i class="dot near" style="right:2%;top:70%;--d:90px;--c:var(--lime)"></i>
+    <article class="card w1200 t1 reveal has-pop">
+      <div class="clock pop stopped" id="clock1"></div>
+      <span class="ghost" style="right:40px;bottom:-30px">01</span>
+      <header class="chapter"><b>01</b><span>영케어러의 하루</span><em>01 / 07</em></header>
+      <h2 class="h1 center"><mark>24시간</mark>을 움직여도<br>영케어러의 삶은 멈춰있습니다.</h2>
+      <div class="video" style="--pos:20% 40%">
+        <img src="img/desk.jpg" alt="">
+        <button class="play" aria-label="영상 재생"></button>
+      </div>
+      <p class="small center">시네마그래프 영상</p>
+    </article>
+  </section>
+
+  <!-- 정의 -->
+  <section class="sec tight">
+    <i class="dot" style="left:10%;top:6%;--d:18px;--c:var(--orange)" data-depth=".5"></i>
+    <i class="dot" style="right:9%;top:70%;--d:22px;--c:var(--lime)" data-depth=".7"></i>
+    <article class="card w1040 t2 reveal split">
+      <div class="copy">
+        <h3 class="h3">가족의 보호자이기 전에</h3>
+        <h2 class="h1"><span class="hl">돌봄이 필요한</span><br>청년입니다.</h2>
+        <p><b>영케어러</b>는 질병이나 장애 또는 노화로<br>돌봄이 필요한 <b>가족의 일상을 책임지는 청년</b>입니다.</p>
+        <p>친구들이 배우고 경험하며 자신만의 내일을 준비하는 동안<br>어떤 청년은 약을 챙기고 식사를 준비하고 병원에 동행합니다.<br>사랑하는 가족과 함께 살아가는 <b>일과 자신의 미래를 꿈꾸는 일이<br>서로 멀어지지 않도록 지금 우리의 관심</b>이 필요합니다.</p>
+        <p class="caption">* 실제 영케어러의 사진을 기반으로, 초상권 보호를 위해 일부 AI 보정하였습니다.</p>
+      </div>
+      <figure class="photo-card popout-r tilt-r slide-r"><img src="img/wheel.jpg" alt="병원 복도에서 휠체어를 미는 청년" style="aspect-ratio:36/40"></figure>
+    </article>
+  </section>
+
+  <!-- 02 -->
+  <section class="sec tight" id="time" data-ch="2">
+    <i class="dot" style="left:14%;top:14%;--d:20px;--c:var(--lime)" data-depth=".5"></i>
+    <i class="dot" style="right:13%;top:66%;--d:24px;--c:var(--orange)" data-depth=".7"></i>
+    <article class="card w880 t3 reveal">
+      <span class="ghost" style="right:30px;bottom:-30px">02</span>
+      <header class="chapter"><b>02</b><span>돌봄의 시간</span><em>02 / 07</em></header>
+      <h2 class="h1 center sm"><mark>영케어러</mark>의 하루에는<br>돌봄의 시간이 흐릅니다.</h2>
+      <div class="stat-photo"><img src="img/feeding.jpg" alt="식사를 돕는 청년"></div>
+      <div class="stats">
+        <div class="stat"><div class="clock mini stopped" data-angle="324"></div><h4>주당 평균 돌봄시간</h4><p class="num"><b data-count="21.6">21.6</b><i>시간</i></p><p class="small">한 주의 상당한 시간을<br>가족 돌봄에 사용합니다.</p></div>
+        <div class="stat"><div class="clock mini stopped" data-angle="200"></div><h4>평균 돌봄기간</h4><p class="num"><b data-count="46.1">46.1</b><i>개월</i></p><p class="small">오랜 시간 누군가의<br>보호자로 살아갑니다.</p></div>
+        <div class="stat"><div class="clock mini stopped" data-angle="110"></div><h4>희망보다 긴 주간 돌봄시간</h4><p class="num"><b data-count="7.3">7.3</b><i>시간</i></p><p class="small">돌봄의 무게를 나눌<br>지원이 필요합니다.</p></div>
+      </div>
+      <p class="source"><b>보건복지부 「2022년 가족돌봄청년 실태조사」(2023년 발표)</b><br><span class="caption">* 실제 영케어러의 사진을 기반으로, 초상권 보호를 위해 일부 AI 보정하였습니다.</span></p>
+    </article>
+  </section>
+
+  <!-- 03 -->
+  <section class="sec tight" id="compare" data-ch="3">
+    <div class="glow"></div>
+    <i class="dot" style="left:20%;top:10%;--d:16px;--c:var(--orange)" data-depth=".5"></i>
+    <i class="dot" style="right:20%;top:36%;--d:22px;--c:var(--lime)" data-depth=".7"></i>
+    <article class="card w720 t4 reveal">
+      <header class="chapter"><b>03</b><span>다른 일상</span><em>03 / 07</em></header>
+      <div class="split inner">
+        <div class="copy">
+          <h2 class="h1">같은 나이<br><mark>다른 일상</mark></h2>
+          <p>누군가는 오늘을 즐기고,<br>누군가는 오늘도 가족을 돌봅니다.</p>
+        </div>
+        <figure class="photo-card popout-r tilt-r slide-r small-card"><img src="img/desk.jpg" alt="책상 앞에 앉은 청년의 뒷모습" style="aspect-ratio:29/22;object-position:80% 50%"></figure>
+      </div>
+      <div class="receipts">
+        <div class="receipt tilt-l2 rise" style="--i:0">
+          <header><b>보통의 청년</b><span>DAILY LIFE</span></header>
+          <h4>오늘을 즐기기 위한 지출</h4>
+          <ul><li><span>아메리카노 2잔</span><b>12,000원</b></li><li><span>영화 티켓</span><b>20,000원</b></li><li><span>친구 생일선물</span><b>30,000원</b></li><li><span>공부할 교재</span><b>25,000원</b></li></ul>
+          <footer><span>합계</span><b>87,000원</b></footer>
+        </div>
+        <div class="receipt lime tilt-r2 rise" style="--i:1">
+          <header><b>영케어러 청년</b><span>CARING LIFE</span></header>
+          <h4>가족을 돌보기 위한 지출</h4>
+          <ul><li><span>환자용 영양식</span><b>15,000원</b></li><li><span>의료 소모품</span><b>23,000원</b></li><li><span>약제비</span><b>18,000원</b></li><li><span>병원 교통비</span><b>12,000원</b></li></ul>
+          <footer><span>합계</span><b>68,000원</b></footer>
+        </div>
+      </div>
+      <p class="caption">* 실제 영케어러의 사진을 기반으로, 초상권 보호를 위해 일부 AI 보정하였습니다.</p>
+    </article>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec tight last" id="stories" data-ch="4">
+    <div class="glow tall"></div>
+    <i class="dot" style="left:23%;top:8%;--d:14px;--c:#fff" data-depth=".4"></i>
+    <i class="dot" style="right:24%;top:30%;--d:12px;--c:#fff" data-depth=".6"></i>
+    <article class="card w560 t5 reveal">
+      <header class="chapter"><b>04</b><span>영케어러 이야기</span><em>04 / 07</em></header>
+
+      <div class="story">
+        <figure class="photo-card story-photo left slide-l"><img src="img/story1.jpg" alt=""><b class="num-blob">01</b></figure>
+        <h5>정서적 고립</h5>
+        <blockquote>“아무도 없는 외딴 섬에<br>엄마와 같이 갇혀 버린<br>기분이에요.”</blockquote>
+        <p>간호한 지 3년째, 아무도 없는 집에서 <b>말을 온전히 할 수 없는<br>엄마와 단둘이 보낸 시간도 3년입니다.</b> 지안이는 마음을<br>터놓을 곳도 힘든 이야기를 위로 받을 곳도 없습니다.</p>
+      </div>
+      <div class="story">
+        <figure class="photo-card story-photo right slide-r"><img src="img/story2.jpg" alt=""><b class="num-blob">02</b></figure>
+        <h5>사회적 고립</h5>
+        <blockquote>“매번 연차를 쓸 수는 없으니…<br>그만둘 수밖에 없었죠.<br>방법이 없잖아요.”</blockquote>
+        <p>매번 병원에 갈 때마다 보호자의 동행이 필수이다 보니 창민이는<br><b>어렵게 들어간 회사를 그만둘 수밖에 없었습니다.</b> 그래도<br>아버지를 봐줄 곳도 믿고 맡길 사람도 없어 창민이는 홀로<br>그 짐을 감당하고 있습니다.</p>
+      </div>
+      <div class="story">
+        <figure class="photo-card story-photo left slide-l"><img src="img/story3.jpg" alt=""><b class="num-blob">03</b></figure>
+        <h5>정서적 고립</h5>
+        <blockquote>“병원비에 약값만 해도 벅찬데<br>생활비가 없으니<br>새벽 알바라도 해야죠.”</blockquote>
+        <p>할머니 병원비를 벌기 위해 낮에는 학업과 가족 돌봄을 병행하고<br>잠을 줄여 새벽까지 편의점에서 아르바이트하는 수연이.<br><b>쉴 새 없이 반복되는 일상에 건강도 나빠지고 있지만<br>생활비 걱정에 제대로 쉴 수도 없습니다.</b></p>
+      </div>
+      <p class="caption">* 실제 영케어러의 사진을 기반으로,<br>초상권 보호를 위해 일부 AI 보정하였습니다.</p>
+      <a href="#donate" class="btn-pill dark">지금영케어러 후원하기 <span class="blob"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </article>
+  </section>
+
+  <!-- 05 쉼표 -->
+  <section class="sec pause" id="pause" data-ch="5">
+    <div class="glow wide"></div>
+    <header class="chapter on-dark reveal"><b>05</b><span>쉼표</span><em>05 / 07</em></header>
+    <div class="comma reveal" aria-hidden="true">,</div>
+    <h2 class="h1 center on-dark reveal">그들의 하루에도 쉼표가<br>그들의 돌봄에도 <mark class="light">돌봄이 필요합니다.</mark></h2>
+    <div class="video wide reveal" style="--pos:58% 55%">
+      <img src="img/feeding.jpg" alt="">
+      <button class="play" aria-label="영상 재생"></button>
+    </div>
+    <a href="#donate" class="btn-pill light reveal">지금영케어러 후원하기 <span class="blob"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </section>
+
+  <div class="opening">
+    <i class="dot" style="left:26%;top:30%;--d:16px;--c:var(--lime)" data-depth=".5"></i>
+    <i class="dot" style="right:28%;top:14%;--d:12px;--c:#fff" data-depth=".3"></i>
+    <i class="dot" style="right:24%;top:62%;--d:20px;--c:var(--orange)" data-depth=".7"></i>
+    <div class="floor"></div>
+    <div class="stairs-wrap"><div class="ground light"></div><div id="stairs1" class="stairs"></div></div>
+  </div>
+</div>
+
+<!-- ============ 문 밖 (열린 구간) ============ -->
+<div class="open">
+
+  <!-- 06 -->
+  <section class="sec light" id="cheer" data-ch="6">
+    <i class="dot near" style="right:3%;top:4%;--d:90px;--c:var(--orange)"></i>
+    <i class="dot" style="left:4%;top:34%;--d:22px;--c:var(--lime)" data-depth=".5"></i>
+    <i class="dot" style="right:3%;top:70%;--d:18px;--c:var(--lime)" data-depth=".7"></i>
+    <header class="chapter w1200 reveal"><b>06</b><span>응원하기</span><em>06 / 07</em></header>
+    <article class="card white w1200 reveal split cheer">
+      <span class="ghost" style="right:40px;bottom:-30px">06</span>
+      <figure class="photo-card popout-l tilt-l slide-l"><img src="img/park.jpg" alt="공원에서 휠체어를 미는 청년의 뒷모습" style="aspect-ratio:40/54"></figure>
+      <div class="copy">
+        <h2 class="h2">지금, 청년들에게<br><span class="hl">응원의 메세지</span>를 남겨주세요.</h2>
+        <p class="lead-dark">응원 메세지를 남겨주신 분들 중 추첨을 통해<br><b class="g">커피 쿠폰</b>을 드립니다.</p>
+        <form class="msg-input" id="msgForm">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#154327" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 013 3L8 19l-4 1z"/><path d="M14.5 6.5l3 3"/></svg>
+          <input type="text" id="msgText" maxlength="24" placeholder="영케어러에게 전하고 싶은 따뜻한 마음을 적어주세요." aria-label="응원 메시지">
+          <button type="submit">응원 메세지 남기기 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <div class="examples"><b>응원 메시지 예시</b><div><p><q> 혼자 모든 걸 감당하지 않아도 괜찮아요. </q></p><p><q> 당신의 꿈이 계속 이어지길 응원합니다. </q></p></div></div>
+        <hr>
+        <h4 class="title">이벤트 응모 방법</h4>
+        <ol class="steps">
+          <li class="rise" style="--i:0"><span><svg viewBox="0 0 24 24" fill="none" stroke="#154327" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h10v9"/><path d="M5 4v16h7"/><path d="M8 8h4M8 12h3"/><path d="M14 20l1-3 5-5 2 2-5 5-3 1z"/></svg><i>01</i></span><b>응원 메시지 작성</b><small>따뜻한 마음을 남겨주세요</small></li>
+          <li class="rise" style="--i:1"><span><svg viewBox="0 0 24 24" fill="none" stroke="#154327" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 14l2.2 2.2L15.5 12"/></svg><i>02</i></span><b>응모 정보 입력</b><small>참여 정보를 입력해 주세요</small></li>
+          <li class="rise" style="--i:2"><span><svg viewBox="0 0 24 24" fill="none" stroke="#154327" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1.5 13h-9z"/><path d="M5 8h14"/><path d="M8 8l1-4h6l1 4"/><path d="M7.3 13h9.4"/></svg><i>03</i></span><b>커피 쿠폰 증정</b><small>추첨 후 당첨자에게 드려요</small></li>
+        </ol>
+        <p class="caption">* 실제 영케어러의 사진을 기반으로, 초상권 보호를 위해 일부 AI 보정하였습니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 응원 메시지 모음 -->
+  <section class="sec light notes-sec">
+    <i class="dot" style="left:6%;top:16%;--d:18px;--c:var(--orange)" data-depth=".5"></i>
+    <i class="dot" style="right:6%;top:12%;--d:22px;--c:var(--lime)" data-depth=".7"></i>
+    <p class="eyebrow reveal">청년들을 향한 따뜻한 마음이 모였어요!</p>
+    <h2 class="h1 center reveal">돌봄을 돌보는 <span class="hl">응원 메시지</span></h2>
+    <p class="lead-dark center reveal">많은 분들이 전해주신 소중한 응원 메시지입니다.</p>
+    <div class="notes" id="notes">
+      <div class="note lime" style="--r:-2deg">지금도 충분히<br>잘하고 있어요!</div>
+      <div class="note" style="--r:1.5deg">언제나<br>응원해요!</div>
+      <div class="note" style="--r:-1deg">건강도 꼭<br>챙기세요!</div>
+      <div class="note" style="--r:2deg">지금의 노력이<br>빛날 거예요!</div>
+      <div class="note" style="--r:1.5deg">혼자가 아니에요!</div>
+      <div class="note" style="--r:-2deg">조금만 더<br>힘내요!</div>
+      <div class="note lime" style="--r:1deg">오늘도<br>응원합니다!</div>
+      <div class="note" style="--r:-1.5deg">포기하지 마세요!</div>
+      <div class="note" style="--r:-1deg">당신은<br>정말 멋져요!</div>
+      <div class="note" style="--r:2deg">지금도 참<br>잘하고 있어요!</div>
+      <div class="note" style="--r:-2deg">당신의 용기를<br>응원해요!</div>
+      <div class="note lime" style="--r:1.5deg">언제든 도움을<br>요청하세요!</div>
+    </div>
+    <nav class="pager" aria-label="응원 메시지 페이지"><button aria-label="이전">‹</button><button class="on">1</button><button>2</button><button>3</button><button>4</button><button>5</button><span>…</span><button>10</button><button aria-label="다음">›</button></nav>
+  </section>
+
+  <!-- 07 -->
+  <section class="sec light" id="support" data-ch="7">
+    <i class="dot near" style="left:-36px;top:30%;--d:100px;--c:var(--lime)"></i>
+    <header class="chapter w1200 reveal"><b>07</b><span>후원</span><em>07 / 07</em></header>
+    <div class="split w1200 intro reveal">
+      <span class="ghost" style="left:52%;top:-110px">07</span>
+      <div class="copy">
+        <h2 class="h1">마음을 잇는 한 사람이<br><mark>청년의 하루</mark>를<br>바꿀 수 있습니다</h2>
+        <hr class="short">
+        <h3 class="h3">한 사람의 관심이 돌봄의 무게를<br>나누는 시작이 됩니다.</h3>
+        <p class="muted">세상에 나눔의 다리를 이어가는 월드휴먼브리지와 함께<br>영케어러들에게 나눔을 이어주세요</p>
+        <p class="caption">* 실제 영케어러의 사진을 기반으로, 초상권 보호를 위해 일부 AI 보정하였습니다.</p>
+      </div>
+      <div class="duo">
+        <i class="dot" style="left:42%;top:0;--d:20px;--c:var(--lime)" data-depth=".5"></i>
+        <i class="dot" style="right:2%;top:10%;--d:14px;--c:var(--orange)" data-depth=".7"></i>
+        <figure class="photo-card a slide-l"><img src="img/store.jpg" alt="편의점에서 일하는 청년"></figure>
+        <figure class="photo-card b slide-r"><img src="img/home.jpg" alt="집에서 가족을 돌보는 청년"></figure>
+      </div>
+    </div>
+
+    <h2 class="h2 center reveal use-title">돌봄을 돌봄 <span class="hl">영케어러 캠페인 후원금</span>은<br>아래와 같이 사용됩니다</h2>
+    <div class="uses w1200">
+      <div class="use rise" style="--i:0"><span class="icon-blob"><svg viewBox="0 0 24 24" fill="none" stroke="#0E2A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><h4>생계비 지원</h4><ul><li>기본 생활비 지원</li><li>식료품 및 생필품 지원</li><li>주거비 및 공과금 지원</li><li>생활 안정 지원</li></ul></div>
+      <div class="use rise" style="--i:1"><span class="icon-blob"><svg viewBox="0 0 24 24" fill="none" stroke="#0E2A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/><path d="M12 10.5v6M9 13.5h6"/></svg></span><h4>의료비 지원</h4><ul><li>수술 및 입원비 지원</li><li>재활치료비 지원</li><li>진료·검사·약제비 지원</li><li>의료비 본인부담금 지원</li></ul></div>
+      <div class="use rise" style="--i:2"><span class="icon-blob"><svg viewBox="0 0 24 24" fill="none" stroke="#0E2A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11.5s-3.5-2.2-3.5-4.6A2 2 0 0112 5.8a2 2 0 013.5 1.1c0 2.4-3.5 4.6-3.5 4.6z"/><path d="M3 13l4 1.5 3 4.5h4l3-4.5 4-1.5"/><path d="M3 13v6M21 13v6"/></svg></span><h4>가족 돌봄<br>비용 지원</h4><ul><li>가족 간병비 지원</li><li>의료·위생용품 지원</li><li>간병인 및 돌봄 서비스 지원</li><li>돌봄 관련 부대비용 지원</li></ul></div>
+      <div class="use rise" style="--i:3"><span class="icon-blob"><svg viewBox="0 0 24 24" fill="none" stroke="#0E2A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c1.8 1.7 4 2.5 6 2.5s4.2-.8 6-2.5v-4.5"/><path d="M22 9v6"/></svg></span><h4>교육비 지원</h4><ul><li>학업 유지비 지원</li><li>학습 기자재 및 교육용품 지원</li><li>자격증 및 직업교육 지원</li><li>취업·진로 개발 지원</li></ul></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 피날레 ============ -->
+<section class="finale" id="donate">
+  <div class="curve"></div>
+  <i class="dot" style="left:6%;top:22%;--d:20px;--c:var(--lime)" data-depth=".5"></i>
+  <i class="dot" style="left:48%;top:18%;--d:12px;--c:#fff" data-depth=".3"></i>
+  <i class="dot" style="left:46%;top:70%;--d:24px;--c:var(--orange)" data-depth=".7"></i>
+  <i class="dot" style="right:5%;top:26%;--d:16px;--c:var(--lime)" data-depth=".6"></i>
+  <i class="dot near" style="left:4%;top:68%;--d:80px;--c:var(--lime)"></i>
+  <div class="finale-inner">
+    <form class="donate-form reveal" id="donateForm">
+      <h3>매월 얼마의 마음을<br>이어주시겠어요?</h3>
+      <div class="amounts" role="radiogroup" aria-label="후원 금액">
+        <button type="button" class="on" data-v="10000">1만 원</button>
+        <button type="button" data-v="20000">2만 원</button>
+        <button type="button" data-v="30000">3만 원</button>
+      </div>
+      <label class="custom"><b>직접 입력</b><span><input type="text" inputmode="numeric" id="customAmt" placeholder="금액 입력"><i>원 / 월</i></span></label>
+      <hr>
+      <p class="summary"><span>선택한 정기후원</span><b id="sum">월 10,000원</b></p>
+      <button type="submit" class="donate-btn">지금 영케어러 후원하기 <span class="blob dark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+    </form>
+    <div class="finale-copy reveal">
+      <div class="clock big running" id="clock2"></div>
+      <h2 class="h1 on-dark big">이번에는 우리가<br><mark class="light">브리지가 될 차례</mark></h2>
+      <p class="lead">월드휴먼브리지와 함께 후원해 주시면<br><b>돌봄에 지친 영케어러에게 응원과 지원</b>을<br>이어가는 데 힘이 됩니다.</p>
+      <div class="closing"><p>한 사람의 시간을 지키는 일이<br>한 사람의 미래를 지키는 일이 되도록</p><strong>지금 함께해 주세요.</strong></div>
+    </div>
+    <div class="stairs-wrap fin"><div class="ground"></div><div id="stairs2" class="stairs"></div></div>
+  </div>
+</section>
+
+</main>
+<div class="proto-badge">디자인 시안 · 실제 후원 페이지가 아닙니다</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js?v=3"></script>
+</body>
+</html>

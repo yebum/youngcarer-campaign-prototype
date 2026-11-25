@@ -1,0 +1,132 @@
+/* =====================================================================
+   반응형 재정의: 어떤 화면 폭에서도 사진·글자가 화면 밖으로 잘리지 않게
+   --pop = 카드 밖으로 내밀 수 있는 여유 (화면이 좁으면 0)
+   ===================================================================== */
+.w1200{--cw:1200px}.w1040{--cw:1040px}.w880{--cw:880px}.w720{--cw:720px}.w560{--cw:560px}
+.card,.intro{--pop:clamp(0px,calc((100vw - var(--cw,1200px))/2 - 34px),60px)}
+main{overflow-x:clip}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,620px);align-items:center;gap:20px;width:min(1200px,calc(100% - 48px));padding:150px 0 100px;min-height:0}
+.hero-copy{min-width:0}
+.hero-stage{flex:none;width:100%;height:auto;aspect-ratio:620/700}
+.hero-photo{right:0;top:0;width:70%}
+.hero-photo img{aspect-ratio:43/47}
+.room-wrap{left:-36%;top:27%;width:106%}
+.hero-stage .caption{right:0;bottom:0;left:auto;white-space:normal;text-align:right;max-width:100%}
+
+/* pop-outs scale with the free space beside the card */
+.card.split{padding:72px}
+.popout-r{flex:0 0 380px;margin-right:calc(var(--pop)*-2.2)}
+.card.t4 .small-card{flex:0 0 300px;margin-right:calc(var(--pop)*-1.77)}
+.card.cheer{padding:64px 72px 72px 56px}
+.popout-l{flex:0 0 400px;margin-left:calc(var(--pop)*-2.1)}
+.story-photo{width:calc(100% - 30px)}
+.story-photo.left{margin-left:calc(var(--pop)*-1)}
+.story-photo.right{margin-left:calc(30px + var(--pop))}
+.left .num-blob{right:-14px}.right .num-blob{left:-14px}
+.split .copy{min-width:0}
+.cheer .copy{flex:1 1 560px;max-width:600px}
+.intro .copy{flex:1 1 520px;max-width:600px}
+
+/* notes wrap instead of a fixed 4-column grid */
+.notes{display:flex;flex-wrap:wrap;justify-content:center;gap:36px 34px;max-width:1200px}
+.note{flex:0 1 auto}
+
+/* duo photos in % */
+.duo{flex:0 1 540px;width:100%;max-width:540px;height:auto;aspect-ratio:540/470}
+.duo .photo-card{width:54%}
+.duo .a{left:0;top:9%}.duo .b{left:46%;top:19%}
+
+/* finale */
+.finale-inner{width:min(1120px,100%)}
+.donate-form{flex:0 1 460px;min-width:0}
+.finale-copy{flex:0 1 560px;min-width:0}
+.custom span{width:auto;flex:1 1 200px;min-width:0;max-width:250px}
+.stairs-wrap.fin{width:360px;right:max(-150px,calc((1120px - 100vw)/2 + 20px));bottom:-100px}
+
+/* ---------- breakpoints ---------- */
+@media (max-width:1320px){ .rail{display:none} .stairs-wrap.fin{display:none} }
+@media (max-width:1180px){
+  .hero{grid-template-columns:1fr;gap:56px;padding:130px 0 80px}
+  .hero-stage{max-width:560px;margin:0 auto}
+  .room-wrap{left:-6%;top:36%;width:86%}
+  .hero-photo{width:66%}
+  .card{padding:48px 40px 56px;border-radius:44px}
+  .card.has-pop{padding-top:140px}
+  .card.split,.card.cheer{padding:48px 40px}
+  .split,.split.inner,.finale-inner,.intro{flex-direction:column;align-items:stretch;gap:40px}
+  .popout-r,.popout-l,.card.t4 .small-card{flex:none;margin:0 auto;width:min(380px,100%);rotate:0deg}
+  .cheer .copy,.intro .copy,.finale-copy,.donate-form{flex:none;max-width:none;width:100%}
+  .donate-form{max-width:520px;margin:0 auto}
+  .duo{margin:0 auto}
+  .uses{grid-template-columns:repeat(2,1fr);row-gap:70px}
+  .ghost{display:none}
+  .finale{padding:130px 24px 96px}
+}
+@media (max-width:900px){
+  .nav-links{gap:0}
+  .nav-links a:not(.btn-dark){display:none}
+  .copy p br,.story p br,.lead br,.lead-dark br,.closing br,.muted br,.small br,.caption br{display:none}
+  .sec{padding-top:140px}.sec.tight{padding-top:40px}
+  .sec.light{padding-top:32px}
+  .stats{grid-template-columns:1fr;margin-top:-40px;row-gap:44px}
+  .story-photo.left,.story-photo.right{margin-left:0;width:100%;rotate:0deg}
+  .story blockquote{font-size:24px}
+  .examples{flex-direction:column;align-items:flex-start;gap:8px}
+  .examples>div{border-left:0;padding-left:0}
+  .steps{grid-template-columns:1fr}
+  .eyebrow{font-size:16px;text-align:center}
+  .eyebrow::before,.eyebrow::after{width:20px;flex:none}
+  .comma{font-size:160px;height:80px}
+  .opening{height:300px}.stairs-wrap{width:360px}.floor{top:130px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .nav-wrap{inset:12px 0 auto 0}
+  .nav-bar{padding:8px 8px 8px 16px}
+  .logo img{width:120px;height:34px}
+  .btn-dark{padding:10px 14px 10px 16px;font-size:14px}
+  .hero{padding:110px 0 110px;width:calc(100% - 40px)}
+  .hero-stage{aspect-ratio:auto;padding-top:112%}
+  .hero-stage .caption{bottom:-48px;left:0;right:0;text-align:left}
+  .lead{font-size:17px}.lead-dark{font-size:17px}
+  .btn-pill{font-size:16px;padding:8px 8px 8px 22px;gap:12px}
+  .blob{width:44px;height:44px}
+  .sec{padding-left:16px;padding-right:16px}
+  .sec.light{padding:32px 16px 80px;gap:40px}
+  .card,.card.split,.card.cheer{padding:36px 22px 40px;border-radius:32px}
+  .card.has-pop{padding-top:110px}
+  .clock.pop{--s:180px;top:-90px;margin-left:-90px}
+  .chapter{font-size:17px;gap:10px}.chapter b{width:40px;height:40px}
+  .video{border-radius:22px;margin-bottom:40px}.video img{border-radius:22px}
+  .play{width:72px;height:72px;bottom:-36px}
+  .play::after{left:29px;top:22px;border-left-width:20px;border-top-width:13px;border-bottom-width:13px}
+  .receipts,.uses{grid-template-columns:1fr}
+  .uses{row-gap:64px}
+  .receipt,.receipt.lime{rotate:0deg}
+  .stat .num b{font-size:52px}
+  .msg-input{flex-wrap:wrap;border-radius:24px;padding:14px}
+  .msg-input input{flex:1 1 60%;border-left:0;padding-left:0}
+  .msg-input button{width:100%;justify-content:center}
+  .note{min-width:0;width:calc(50% - 10px);padding:0 10px;font-size:16px;height:104px}
+  .notes{gap:26px 20px}
+  .pager button{width:36px;height:36px}
+  .donate-form{padding:32px 22px 26px;border-radius:32px}
+  .donate-form h3{font-size:27px}
+  .custom{flex-wrap:wrap}.custom span{max-width:none;flex-basis:100%}
+  .donate-btn{font-size:17px;height:60px}
+  .summary b{font-size:24px}
+  .closing strong{font-size:22px}
+  .finale{padding:110px 16px 72px}
+  .curve{height:160px;top:-110px}
+  .use h4{font-size:22px}
+  .h3{font-size:21px}
+}
+
+@media (max-width:900px){ .slide-l{translate:-24px 0} .slide-r{translate:24px 0} }
+
+/* 시안 안내 배지 */
+.proto-badge{position:fixed;left:16px;bottom:16px;z-index:60;background:rgba(14,42,26,.92);color:#fff;font-size:12px;line-height:1.5;padding:8px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(3,18,10,.3)}
+.toast{position:fixed;left:50%;bottom:64px;translate:-50% 20px;z-index:70;background:var(--g900);color:#fff;font-size:15px;padding:14px 22px;border-radius:16px;box-shadow:0 14px 30px rgba(3,18,10,.35);opacity:0;pointer-events:none;transition:opacity .3s,translate .3s;max-width:calc(100vw - 32px);text-align:center}
+.toast.show{opacity:1;translate:-50% 0}
